@@ -22,9 +22,10 @@ from books.api import viewsets as booksviewsets
 
 route = routers.DefaultRouter()
 
-route.register(r'books/', booksviewsets.BooksViewSet, basename="Books")
+route.register(r'books', booksviewsets.BooksViewSet, basename="Books")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(route.urls))
 ]
+urlpatterns += route.urls
