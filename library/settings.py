@@ -78,16 +78,23 @@ WSGI_APPLICATION = 'library.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'wsd1/api_library',
+#         'USER': 'wsd1',
+#         'PASSWORD': 'v2_42Teu_Zr9ep5KVwkVHzEbbV9bkLs5',
+#         'HOST': 'db.bit.io',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wsd1/api_library',
-        'USER': 'wsd1',
-        'PASSWORD': 'v2_42Teu_Zr9ep5KVwkVHzEbbV9bkLs5',
-        'HOST': 'db.bit.io',
-        'PORT': '5432',
+        'ENGINE' : 'django.db.backends.sqlite3' ,
+        'NAME' : BASE_DIR  /  'db.sqlite3' ,
     }
 }
+ 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
