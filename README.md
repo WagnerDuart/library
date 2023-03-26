@@ -11,7 +11,7 @@ Também será necessário o editor de código **Visual Studio Code** que pode se
 
 ---
 
-# <p align = center>**Criando um projeto com o Django**
+# <p align = center>**Criando uma  API Django**
 
 Para utilizar o django no projeto iremos criar uma nova pasta que conterá o projeto e dentro desta pasta máquina virtual `venv` para o python.
 
@@ -162,7 +162,7 @@ Exemplo
 
 Tela que aparecerá ao iniciar o Visual Studio code:
 
-![](images/iniprojeto.png)
+![](images/1.png)
 
 ---
 
@@ -170,7 +170,7 @@ Tela que aparecerá ao iniciar o Visual Studio code:
 
 Aperte a tecla F1 do teclado e procure “Selecionar Interpretador” e clique nele.
 
-![](images/interpretador.png)
+![](images/2.png)
 
 Selecione o python da pasta .venv do projeto e ative ele como interpretador.
 
@@ -193,10 +193,11 @@ No terminal verifique se está na pasta library, se sim digite o comando para ex
 No terminal aparecerá o ip no qual está sendo executado exemplo: http://127.0.0.1:8000/
 Ao clicar nesta tela será direcionado para a página inicial de um projeto django.
 
-![](images/inidjango.png)
+![](images/3.png)
 
 Na saída do terminal apareceu que:
 
+```
 <code style="color:red">
     You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
     Run 'python manage.py migrate' to apply them.
@@ -205,6 +206,7 @@ Na saída do terminal apareceu que:
     Starting development server at http://127.0.0.1:8000/
 </code>
 
+```
 Para parar a execução CTRL - C ou CTRL-BREAK, ser não tiver o BREAK no seu teclado execute FN-CTRL-B
 
 ---
@@ -310,8 +312,8 @@ Após ter adicionado essa classe vá na pasta **library/library** e selecione o 
 ```bash
      📁 library
      ┣ 📁 books
-     ┗📁 library
-          ┗ 📜 settings.py
+     ┗ 📁 library
+        ┗ 📜 settings.py
 ```
 
 Na linha 42 e 43 em **INSTALLED_APPS** adicione o books e rest_framework: ‘rest_framework’, ‘books’, :
@@ -404,9 +406,9 @@ A tabela foi criada no banco de dados.
 Entre na pasta `books` e crie uma pasta `api`, dentro da pasta `api` crie os arquivos `serializers.py` e `viewsets.py`:
 
 📁 library
-  ┣ 📁 books
-  +  ┣ 📁 api
-     + ┣ 📜 serializers.py
+ ┣ 📁 books
+    ┣ 📁 api
+       ┣ 📜 serializers.py
        ┗ 📜 viewsets.py
 
 Vá ate o arquivo `books\api\serializers.py` nele escreva o seguinte código:
@@ -483,13 +485,13 @@ No terminal verifique se está na pasta library, se sim digite o comando para ex
 No terminal aparecerá o ip no qual está sendo executado exemplo: http://127.0.0.1:8000/
 Ao clicar nesta tela será direcionado para a página inicial de um projeto api library.
 
-![](images/interpretador.png) 
+![](images/4.png) 
 
 Clicando no link será direcionado para a Books List, onde vc consiguira publicar os livros no banco de dados.
 
-![](images/interpretador.png)
+![](images/5.png)
 
-![](images/interpretador.png)
+![](images/6.png)
 
 
 ## **Passo 13:** Como fazer o deploy da sua aplicação Django API Library.
@@ -502,13 +504,15 @@ Crie uma conta no pythonanywhere e a acesse.
 
 Implantar um projeto Django no PythonAnywhere é muito parecido com executar um projeto Django em seu próprio PC. Você usará um virtualenv, assim como provavelmente faz em seu próprio PC, você terá uma cópia do seu código no PythonAnywhere que poderá editar, navegar e confirmar no controle de versão.
 
-A principal diferença é que, em vez de usar o servidor Django dev manage.py runservere visualizar seu site no localhost, você criará o que chamamos de aplicativo Web por meio da guia Web em nossa interface do usuário e, em seguida, configurará com um arquivo WSGI cujo trabalho é simplesmente importar seu projeto Django.
+A principal diferença é que, em vez de usar o servidor Django dev `manage.py runservere` visualizar seu site no localhost, você criará o que chamamos de aplicativo Web por meio da guia Web em nossa interface do usuário e, em seguida, configurará com um arquivo WSGI cujo trabalho é simplesmente importar seu projeto Django.
 
 **Passo 1: Fazendo upload do seu código para o PythonAnywhere**
 
-![](images/interpretador.png)
+![](images/7.png)
 
 Vá ate consoles e click em bash, ao clica vai ser criado um novo console.
+
+![](images/8.png)
 
 Supondo que seu código já esteja em um site de compartilhamento de código como GitHub ou Bitbucket, você pode simplesmente cloná-lo em um Bash Console :
 
@@ -549,9 +553,9 @@ Neste ponto, você precisa estar armado com 3 informações:
 
 Vá para a guia Web e crie um novo aplicativo da web, escolhendo a opção "Configuração manual" e a versão correta do Python (a mesma que você usou para criar seu virtualenv).
 
-![](images/interpretador.png)
+![](images/9.png)
 
-![](images/interpretador.png)
+![](images/10.png)
 
 NOTA: Certifique-se de escolher Manual Configuration , não a opção "Django", que é apenas para novos projetos.
 
@@ -559,7 +563,7 @@ NOTA: Certifique-se de escolher Manual Configuration , não a opção "Django", 
 
 Feito isso, digite o nome do seu virtualenv na seção Virtualenv na guia web e clique em OK.
 
-[](images/interpretador.png)
+[](images/11.png)
 
 Você pode apenas usar seu nome curto "mysite-virtualenv" e ele será automaticamente concluído em seu caminho completo em /home/username/.virtualenvs.
 
@@ -569,13 +573,13 @@ Embora isso não seja necessário para o funcionamento do aplicativo, você pode
 
 Digite o caminho para a pasta do seu projeto na seção Código na guia da Web, por exemplo, /home/myusername/mysite em Código-fonte e Diretório de trabalho
 
-[](images/interpretador.png)
+[](images/12.png)
 
 **Edite seu arquivo WSGI**
 
-Uma coisa importante aqui: seu projeto Django (se você estiver usando uma versão recente do Django) terá um arquivo dentro dele chamado wsgi.py. Este não é o que você precisa alterar para configurar as coisas no PythonAnywhere - o sistema aqui ignora esse arquivo.
+Uma coisa importante aqui: seu projeto Django (se você estiver usando uma versão recente do Django) terá um arquivo dentro dele chamado `wsgi.py`. Este não é o que você precisa alterar para configurar as coisas no PythonAnywhere - o sistema aqui ignora esse arquivo.
 
-Em vez disso, o arquivo WSGI a ser alterado é aquele que possui um link dentro da seção "Código" da guia Web - ele terá um nome como /var/www/yourusername_pythonanywhere_com_wsgi.pyou /var/www/www_yourdomain_com_wsgi.py.
+Em vez disso, o arquivo WSGI a ser alterado é aquele que possui um link dentro da seção "Código" da guia Web - ele terá um nome como `/var/www/yourusername_pythonanywhere_com_wsgi.py` ou `/var/www/www_yourdomain_com_wsgi.py`.
 
 Clique no link do arquivo WSGI e ele o levará a um editor onde você poderá alterá-lo.
 
@@ -623,17 +627,19 @@ e confirar ser aconteceu a migração com sucesso.
 Vá para a guia Web click ou copie e cole o primeiro link que aparece, ele vai ser o link do seu projeto online na rede.
 Dentro desse link vai ter outro link com o retorno dos dados do projeto.
 
-[](images/interpretador.png)
+[](images/9.png)
 
-Para testa o retorno do link da api irei usa o [Insomnia](https://insomnia.rest/download), pode usa outras opções.
+Para testa o retorno do link da api irei usa o [Insomnia](https://insomnia.rest/download), você pode usa outras opções.
 
+[](images/13.png)
 
-[](images/interpretador.png)
+Entre no insomnia e cole o link e click em send e espere o retordo da aplicação.
 
-Entre no insomnia e colo o link e click em send e espere o retordo da aplicação.
+[](images/14.png)
 
-[](images/interpretador.png)
+Faça o mesmo proceço com o link retornado.
 
+[](images/15.png)
 
 É chegamos ao fim de mais uma aplicação, ate uma outra.
 
