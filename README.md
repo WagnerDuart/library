@@ -566,7 +566,7 @@ NOTA: Certifique-se de escolher Manual Configuration , não a opção "Django", 
 
 Feito isso, digite o nome do seu virtualenv na seção Virtualenv na guia web e clique em OK.
 
-[](images/11.png)
+![](images/11.png)
 
 Você pode apenas usar seu nome curto "mysite-virtualenv" e ele será automaticamente concluído em seu caminho completo em /home/username/.virtualenvs.
 
@@ -576,7 +576,7 @@ Embora isso não seja necessário para o funcionamento do aplicativo, você pode
 
 Digite o caminho para a pasta do seu projeto na seção Código na guia da Web, por exemplo, /home/myusername/mysite em Código-fonte e Diretório de trabalho
 
-[](images/12.png)
+![](images/12.png)
 
 **Edite seu arquivo WSGI**
 
@@ -630,19 +630,19 @@ e confirar ser aconteceu a migração com sucesso.
 Vá para a guia Web click ou copie e cole o primeiro link que aparece, ele vai ser o link do seu projeto online na rede.
 Dentro desse link vai ter outro link com o retorno dos dados do projeto.
 
-[](images/9.png)
+![](images/9.png)
 
 Para testa o retorno do link da api irei usa o [Insomnia](https://insomnia.rest/download), você pode usa outras opções.
 
-[](images/13.png)
+![](images/13.png)
 
 Entre no insomnia e cole o link e click em send e espere o retordo da aplicação.
 
-[](images/14.png)
+![](images/14.png)
 
 Faça o mesmo proceço com o link retornado.
 
-[](images/15.png)
+![](images/15.png)
 
 É chegamos ao fim de mais uma aplicação, ate uma outra.
 
