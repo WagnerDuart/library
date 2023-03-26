@@ -13,6 +13,9 @@ Também será necessário o editor de código **Visual Studio Code** que pode se
 
 # <p align = center>**Criando uma  API Django**
 
+
+Essa api tem a função de cadastro de livros com seus respctivos aspctos(id, titulo, autor, ano de lançamento, estado, páginas, editora e o dia de cadastro ).
+
 Para utilizar o django no projeto iremos criar uma nova pasta que conterá o projeto e dentro desta pasta máquina virtual `venv` para o python.
 
 ---
